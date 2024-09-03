@@ -9,7 +9,7 @@ function Submit() {
     <button
       type="submit"
       disabled={pending}
-      className="bg-[#202020] p-2 rounded"
+      className="bg-[#202020] p-2 rounded text-white"
     >
       {pending ? (
         <svg
