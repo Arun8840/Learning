@@ -1,4 +1,7 @@
 import Card from "@/Utility/Ui/Card"
+import SideMenu_Container from "@/Utility/Ui/SideMenu/SideMenu_Container"
+import HeaderComponent from "@/components/HeaderComponent"
+import SideMenuComponent from "@/components/SideMenuComponent"
 import React from "react"
 
 function Layout({
@@ -14,14 +17,10 @@ function Layout({
 }) {
   return (
     <div className="min-h-screen flex flex-col gap-1 p-1">
-      <header className="w-full">
-        <Card>header</Card>
-      </header>
+      <HeaderComponent />
       <main className="flex-1 flex gap-1">
-        <aside className="w-[300px]">
-          <Card>side menu</Card>
-        </aside>
-        <section className="flex-1 flex gap-1 p-1">
+        <SideMenuComponent />
+        <section className="flex-1 flex gap-1">
           <div className="flex-1">{children}</div>
           <div className="grid gap-1 min-w-[400px]">
             {analytics}
@@ -30,10 +29,6 @@ function Layout({
           </div>
         </section>
       </main>
-
-      <footer className="w-full">
-        <Card>Footer</Card>
-      </footer>
     </div>
   )
 }
