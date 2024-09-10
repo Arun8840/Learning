@@ -25,7 +25,7 @@ function Navigation_Animator({ children }: Proptypes) {
     <>
       <ul
         ref={PageContainer}
-        className="grid grid-cols-6 absolute inset-0 w-full h-full"
+        className="grid grid-cols-6 absolute z-10 inset-0 w-full h-full"
       >
         {Array.from({ length: 6 }, (_, index) => {
           return (
