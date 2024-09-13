@@ -23,9 +23,9 @@ function Layout({
         <section className="flex-1 grid lg:grid-cols-12 gap-2">
           <div className="col-span-12  lg:col-span-8">{children}</div>
           <div className=" grid gap-2 w-full col-span-12 lg:col-span-4 auto-rows-max">
+            {themes}
             {layoutPages}
             {projects}
-            {themes}
           </div>
         </section>
       </main>

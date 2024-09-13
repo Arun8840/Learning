@@ -1,5 +1,5 @@
 "use client"
-import { productService } from "@/Services/Product_Services"
+import { productService } from "@/Services/DashboardService"
 import React from "react"
 import useSWR from "swr"
 
