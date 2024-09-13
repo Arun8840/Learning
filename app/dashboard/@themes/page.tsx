@@ -5,9 +5,7 @@ function page() {
   return (
     <div className="h-full w-full">
       <Card>
-        <h1 className="text-xl font-medium text-stone-600 p-1 bg-stone-50">
-          Themes
-        </h1>
+        <h1 className=" font-medium text-stone-600 p-1">Themes</h1>
         <ul className="flex flex-wrap gap-1 pt-2">
           <li className="size-14 rounded-full bg-stone-400 grid grid-cols-2">
             {/* primary */}
