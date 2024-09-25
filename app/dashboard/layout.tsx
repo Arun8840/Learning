@@ -17,7 +17,6 @@ function Layout({
 }) {
   return (
     <div className="min-h-screen flex flex-col gap-1 p-1">
-      <HeaderComponent />
       <main className="flex-1 flex gap-2">
         <SideMenuComponent />
         <section className="flex-1 grid lg:grid-cols-12 gap-2">

@@ -1,6 +1,8 @@
 "use client"
 import { dashboardService } from "@/Services/DashboardService"
 import Card from "@/Utility/Ui/Card"
+import Drawer_Item from "@/Utility/Ui/Drawer/Drawer_Item"
+import Drawer_container from "@/Utility/Ui/Drawer/Drawer_container"
 import Skeleton from "@/Utility/Ui/Skeleton"
 import Spinner from "@/Utility/Ui/Spinner"
 import dynamic from "next/dynamic"
@@ -41,52 +43,44 @@ function Overall_Analytics() {
   )
 
   return (
-    <div className="w-full h-full flex flex-col">
-      {isLoading ? (
-        <div className="p-2">
-          {" "}
-          <Skeleton className="w-full min-h-[50px] rounded" />
-        </div>
-      ) : (
-        <h1 className="p-2 font-medium text-stone-700 tracking-wide rounded-t">
-          Overall Skills Data
-        </h1>
-      )}
-      <div className="flex-1">
-        <Card>
-          {isLoading ? (
-            <Skeleton className="w-full h-full" />
-          ) : (
-            <ResponsiveContainer width="100%" height="100%">
-              <BarChart
-                width={500}
-                height={300}
-                data={data}
-                margin={{
-                  top: 10,
-                  right: 10,
-                  left: 10,
-                  bottom: 5,
-                }}
-                barSize={35}
-              >
-                <CartesianGrid strokeDasharray="1 1" />
-                <XAxis dataKey="name" fontSize={10} />
-                <YAxis fontSize={10} />
-                <Tooltip
-                  labelClassName="text-xs"
-                  contentStyle={{
-                    fontSize: 10,
+    <>
+      <div className="w-full h-full flex flex-col">
+        <div className="flex-1">
+          <Card header="Overall Skills Data">
+            {isLoading ? (
+              <Skeleton className="w-full h-full" />
+            ) : (
+              <ResponsiveContainer width="100%" height="100%">
+                <BarChart
+                  width={500}
+                  height={300}
+                  data={data}
+                  margin={{
+                    top: 10,
+                    right: 10,
+                    left: 10,
+                    bottom: 5,
                   }}
-                />
-                <Legend fontSize={10} />
-                <Bar dataKey="rating" stackId="a" fill="#16423C" radius={4} />
-              </BarChart>
-            </ResponsiveContainer>
-          )}
-        </Card>
+                  barSize={35}
+                >
+                  <CartesianGrid strokeDasharray="1 1" />
+                  <XAxis dataKey="name" fontSize={10} />
+                  <YAxis fontSize={10} />
+                  <Tooltip
+                    labelClassName="text-xs"
+                    contentStyle={{
+                      fontSize: 10,
+                    }}
+                  />
+                  <Legend fontSize={10} />
+                  <Bar dataKey="rating" stackId="a" fill="#202020" radius={4} />
+                </BarChart>
+              </ResponsiveContainer>
+            )}
+          </Card>
+        </div>
       </div>
-    </div>
+    </>
   )
 }
 
