@@ -7,7 +7,8 @@ function template({
 }>) {
   return (
     <section className="relative">
-      <Navigation_Animator>{children}</Navigation_Animator>
+      {/* <Navigation_Animator>{children}</Navigation_Animator> */}
+      {children}
     </section>
   )
 }
