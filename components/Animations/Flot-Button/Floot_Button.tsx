@@ -57,10 +57,8 @@ function Floot_Button({ children, varient = "primary", icon }: PropTypes) {
     () => {
       if (isOpenTool) {
         animate?.play()
-        console.log("called")
       } else {
         animate?.reverse()
-        console.log("false called")
       }
     },
     { dependencies: [isOpenTool] }
