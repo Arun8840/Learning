@@ -1,9 +1,9 @@
-import Image from "next/image"
+import TestPage from "@/components/TestPage"
 
 export default function Home() {
   return (
     <main className="grid min-h-screen place-items-center bg-[#0c0c0c]">
-      <h1>hello world</h1>
+      <TestPage />
     </main>
   )
 }

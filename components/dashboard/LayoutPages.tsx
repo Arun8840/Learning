@@ -18,27 +18,29 @@ function LayoutPages() {
     revalidateOnFocus: false,
   })
   return (
-    <Card>
-      <div className="w-full max-h-[230px] overflow-y-auto">
-        {isLoading ? (
-          <Skeleton className="w-full min-h-14" />
-        ) : (
-          <>
-            <h1 className="font-medium text-stone-600 p-1">Pages</h1>
-            <ul className="flex flex-col gap-1 divide-y">
-              {Pages?.map((items: PageTypes) => {
-                return (
-                  <li className="py-2 text-gray-500 text-sm flex items-center gap-2">
-                    <div className="size-9 bg-stone-100 rounded"></div>
-                    <span>{items?.title}</span>
-                  </li>
-                )
-              })}
-            </ul>
-          </>
-        )}
-      </div>
-    </Card>
+    <>
+      <Card>
+        <div className="w-full max-h-[230px] overflow-y-auto">
+          {isLoading ? (
+            <Skeleton className="w-full min-h-14" />
+          ) : (
+            <>
+              <h1 className="font-medium text-stone-600 p-1">Pages</h1>
+              <ul className="flex flex-col gap-1 divide-y">
+                {Pages?.map((items: PageTypes) => {
+                  return (
+                    <li className="py-2 text-gray-500 text-sm flex items-center gap-2">
+                      <div className="size-9 bg-stone-100 rounded"></div>
+                      <span>{items?.title}</span>
+                    </li>
+                  )
+                })}
+              </ul>
+            </>
+          )}
+        </div>
+      </Card>
+    </>
   )
 }
 

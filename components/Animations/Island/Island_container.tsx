@@ -86,8 +86,16 @@ function Island_container({
     { dependencies: [trigger], revertOnUpdate: true }
   )
 
+  const handlePause = () => {
+    animateIsland?.pause()
+  }
+  const handleResume = () => {
+    animateIsland?.resume()
+  }
   return (
     <section
+      onMouseEnter={handlePause}
+      onMouseLeave={handleResume}
       ref={island_container_ref}
       className="border rounded-xl shadow-lg max-w-[350px] fixed z-50 p-2 opacity-0"
     >
