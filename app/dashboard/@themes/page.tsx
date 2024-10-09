@@ -1,6 +1,7 @@
 import Card from "@/Utility/Ui/Card"
 import Dialog from "@/components/Dialog"
 import NotificationIsland from "@/components/NotificationIsland"
+import ToolTip from "@/components/ToolTip"
 import React from "react"
 
 function page() {
@@ -10,6 +11,7 @@ function page() {
         <div className="flex items-center gap-2">
           <NotificationIsland />
           <Dialog />
+          <ToolTip />
         </div>
       </Card>
     </div>

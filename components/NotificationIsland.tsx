@@ -20,7 +20,7 @@ function NotificationIsland() {
       </button>
 
       {/* //todo alert component */}
-      <Island_container varient="error" trigger={isOpen}>
+      <Island_container varient="success" trigger={isOpen}>
         <Island_header title={"Event has been created"} />
         <Island_description
           description={"Sunday, December 03, 2023 at 9:00 AM"}
